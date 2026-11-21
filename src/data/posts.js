@@ -4,7 +4,7 @@ import designImage from "../assets/Design Principles That Matter.svg";
 
 const posts = [
   {
-    id: "future-of-web-development",
+    id: "1",
     category: "Technology",
     title: "The Future of Web Development",
     date: "Nov 20, 2025",
@@ -13,7 +13,7 @@ const posts = [
       "Exploring the latest trends and technologies shaping the future of web development in 2024.",
   },
   {
-    id: "mastering-productivity",
+    id: "2",
     category: "Productivity",
     title: "Mastering Productivity",
     date: "Nov 18, 2025",
@@ -22,7 +22,7 @@ const posts = [
       "Proven strategies and tools to boost your productivity and achieve your goals faster.",
   },
   {
-    id: "design-principles",
+    id: "3",
     category: "Design",
     title: "Design Principles That Matter",
     date: "Nov 15, 2025",
@@ -31,7 +31,7 @@ const posts = [
       "Essential design principles every creator should know to build stunning user experiences.",
   },
   {
-    id: "scalable-applications",
+    id: "4",
     category: "Technology",
     title: "Building Scalable Applications",
     date: "Nov 12, 2025",
@@ -40,15 +40,16 @@ const posts = [
       "Learn how to architect and build applications that can scale to millions of users.",
   },
   {
-    id: "remote-work",
+    id: "5",
     category: "Productivity",
     title: "The Art of Remote Work",
     date: "Nov 10, 2025",
     image: workImage,
-    description: "Tips and best practices for thriving in a remote work environment.",
+    description:
+      "Tips and best practices for thriving in a remote work environment.",
   },
   {
-    id: "color-theory",
+    id: "6",
     category: "Design",
     title: "Color Theory in Digital Design",
     date: "Nov 8, 2025",
