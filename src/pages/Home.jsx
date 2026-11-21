@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiShield, FiSettings, FiZap } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import heroImage from "../assets/hero.jpg";
+import FeatureSection from "../components/FeatureSection";
 
 function Home() {
   return (
@@ -41,44 +42,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-3xl font-bold text-slate-900">
-            Why Choose Blogify?
-          </h2>
-          <p className="mt-3 text-slate-500">
-            Built with modern technologies and best practices to provide the
-            best blogging experience.
-          </p>
-        </div>
-        <div className="mt-10 flex flex-wrap justify-center gap-5">
-          <Feature icon={<FiZap />} title="Fast">
-            Lightning-fast performance with modern web technologies for the best
-            reading experience.
-          </Feature>
-          <Feature icon={<FiShield />} title="Secure">
-            Your data is protected with industry-standard security practices and
-            encryption.
-          </Feature>
-          <Feature icon={<FiSettings />} title="Easy to Manage">
-            Intuitive admin dashboard makes content management effortless and
-            enjoyable.
-          </Feature>
-        </div>
-      </section>
+      <FeatureSection />
     </>
-  );
-}
-
-function Feature({ icon, title, children }) {
-  return (
-    <article className="w-full rounded-xl border border-slate-200 bg-white p-6 sm:w-80">
-      <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-indigo-50 text-xl text-indigo-600">
-        {icon}
-      </div>
-      <h3 className="mt-4 font-semibold text-slate-900">{title}</h3>
-      <p className="mt-2 text-sm leading-5 text-slate-500">{children}</p>
-    </article>
   );
 }
 
