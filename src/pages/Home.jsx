@@ -1,9 +1,26 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import heroImage from "../assets/hero.jpg";
+<<<<<<< HEAD
+import PostCard from "../components/PostCard";
+=======
+>>>>>>> 4dfae2623bfaf1afdb540d9640140a9228da91b3
 import FeatureSection from "../components/FeatureSection";
 
 function Home() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("https://blogify-oquvchi.vercel.app/api/posts")
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data.posts || []);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <section className="bg-gradient-to-br from-violet-50 to-purple-50">
@@ -43,6 +60,42 @@ function Home() {
       </section>
 
       <FeatureSection />
+<<<<<<< HEAD
+
+      <section className="bg-slate-50 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900">
+                Latest Posts
+              </h2>
+              <p className="mt-2 text-slate-500">
+                Check out our most recent articles
+              </p>
+            </div>
+            <Link
+              to="/posts"
+              className="hidden items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 sm:flex"
+            >
+              View All <FiArrowRight />
+            </Link>
+          </div>
+
+          {loading ? (
+            <p className="text-center text-slate-500">Loading...</p>
+          ) : (
+            <div className="flex flex-wrap gap-5">
+              {posts.slice(0, 3).map((post) => (
+                <div key={post.id} className="w-full md:w-[31%]">
+                  <PostCard post={post} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+=======
+>>>>>>> 4dfae2623bfaf1afdb540d9640140a9228da91b3
     </>
   );
 }
