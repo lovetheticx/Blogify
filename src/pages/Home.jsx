@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import heroImage from "../assets/hero.jpg";
-<<<<<<< HEAD
 import PostCard from "../components/PostCard";
-=======
->>>>>>> 4dfae2623bfaf1afdb540d9640140a9228da91b3
 import FeatureSection from "../components/FeatureSection";
 
 function Home() {
@@ -60,7 +57,6 @@ function Home() {
       </section>
 
       <FeatureSection />
-<<<<<<< HEAD
 
       <section className="bg-slate-50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-5">
@@ -94,8 +90,6 @@ function Home() {
           )}
         </div>
       </section>
-=======
->>>>>>> 4dfae2623bfaf1afdb540d9640140a9228da91b3
     </>
   );
 }
